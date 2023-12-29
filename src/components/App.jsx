@@ -41,8 +41,9 @@ export const App = () => {
             return;
           }
          
-          const newTotalPages = setTotalPages(Math.ceil(totalHits / 12));
-          setImages((prevState) => [...prevState, ...hits], newTotalPages,
+          const newTotalPages = Math.ceil(totalHits / 12);
+          
+          setImages((prevState) => [...prevState, ...hits], setTotalPages (newTotalPages),
    );
   
     if (page === newTotalPages) {
